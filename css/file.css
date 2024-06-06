@@ -1,0 +1,440 @@
+* {
+    margin: 0;
+    padding: 0;
+    display: fixed;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
+    /* Light grey background */
+    color: #f2f2f2;
+    /* Dark text color */
+    overflow: hidden;
+    transition: background-color 0.3s, color 0.3s;
+    /* Smooth transition for background and text color */
+}
+
+.header {
+    background-color: #172b4d;
+    color: #fff;
+    /* White text color */
+    text-align: center;
+    padding: 10px auto;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    height: 510px;
+    width: 80%;
+    margin: 20px auto;
+    background: #ffffff;
+    /* Gradient background */
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    transition: box-shadow 0.3s;
+    /* Smooth transition for box shadow */
+    box-shadow: 0 4px 10px grey;
+    /* Subtle box shadow */
+}
+
+h2 {
+    color: #172b4d;
+}
+
+.snippet-id {
+    font-weight: bold;
+    display: inline-block;
+    background-color: #fff;
+    /* Light grey background */
+    /* Dark background for snippet ID */
+    color: #172b4d;
+    padding: 5px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+    /* Smooth transition for background color */
+}
+
+.copy-btn {
+    font-weight: bold;
+    padding: 5px 10px;
+    background-color: #fff;
+    /* Light grey background */
+    color: #172b4d;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+    /* Smooth transition for background color */
+    margin-left: 10px;
+    font-size: 16px;
+    outline: none;
+    /* Remove outline */
+}
+
+.copy-btn:hover {
+    background-color: #172b4d;
+    color: #fff;
+    /* Darker color on hover */
+}
+
+input[type="file"] {
+    display: none;
+    /* Hide the file input initially */
+}
+
+.search-bar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    transition: opacity 0.3s;
+    /* Smooth transition for opacity */
+    opacity: 0;
+}
+
+.search-bar.active {
+    display: block;
+    opacity: 1;
+}
+
+.search-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #172b4d;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px;
+    background-color: transparent;
+    /* Dark background for close button */
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* Smooth transition for background color */
+}
+
+.close-btn:hover {
+    color: #fff;
+    /* Darker color on hover */
+}
+
+.search-container h2 {
+    margin-top: 0;
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.search-container input[type="text"],
+.search-container button[type="submit"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+    /* Smooth transition for border, background, and text color */
+}
+
+.search-container input[type="text"]:focus,
+.search-container button[type="submit"]:hover {
+    border-color: #2f2f2f;
+    /* Dark border color on focus */
+    background-color: #172b4d;
+    color: #fff;
+    /* White text color on hover */
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
+
+footer {
+    background-color: #fff;
+    /* Light grey background */
+
+    text-align: center;
+    color: #172b4d;
+    text-align: center;
+}
+
+.upload-btn {
+    display: inline-block;
+    padding: 80px 40px;
+    background-color: #172b4d;
+    color: #fff;
+    font-size: 15px;
+    border: 1px solid #172b4d;
+    display: fixed;
+    margin-right: 10px;
+    width: 60%;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+
+    border-radius: 18px;
+    outline: none;
+    /* Remove outline */
+}
+
+.up {
+    padding: 10px;
+    height: 250px;
+    max-width: 100%;
+    border: 1px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #fff;
+    /* Light grey background */
+
+}
+
+.upload-btn:hover {
+    background-color: #172b4d;
+    color: #fff;
+}
+
+/* Hide the default file input */
+input[type="file"] {
+    display: none;
+}
+
+button {
+    display: inline;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #172b4d;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    outline: none;
+}
+
+
+button.share {
+    display: inline;
+    padding: 10px 20px;
+    background-color: #172b4d;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    outline: none;
+}
+
+img {
+    height: 30px;
+    width: 30px;
+    border: 1px;
+    border-radius: 100px;
+}
+
+#fileLink img {
+    transition: transform 0.5s ease;
+}
+
+#fileLink img:hover {
+    transform: rotateY(180deg);
+}
+
+.slog {
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+}
+
+.web {
+    width: 30px;
+    height: 30px;
+    margin-bottom: -4px;
+    display: flex;
+}
+
+.slo {
+    display: flex;
+    justify-content: center;
+    /* Align content horizontally at the center */
+    /* Align content horizontally at the center */
+    align-items: center;
+}
+
+.prom {
+    text-decoration: none;
+    color: #172b4d;
+}
+
+/* Loading animation styles */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+}
+
+.loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 4px solid #f3f3f3;
+    /* Light grey border */
+    border-top: 4px solid #3498db;
+    /* Blue border for spinner */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.file-name {
+    color: #172b4d;
+    font-size: 14px;
+    margin-top: 10px;
+    display: block;
+}
+
+p {
+    color: #fff;
+    font-weight: bold;
+}
+
+.code {
+    border: none;
+    border-radius: 2px;
+}
+
+.history-section {
+    background-color: #fff;
+    /* Light red background */
+    padding: 10px;
+    border: 3px solid #172b4d;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: none;
+    /* Initially hide the history section */
+    position: fixed;
+    /* Position the popup */
+    top: 52%;
+    /* Center vertically */
+    left: 50%;
+    /* Center horizontally */
+    transform: translate(-50%, -50%);
+    /* Center the popup */
+    z-index: 9999;
+    /* Ensure the popup is above other elements */
+}
+
+.history-section.visible {
+    display: block;
+    /* Display the history section when it's visible */
+}
+
+.history-section ul {
+    list-style-type: none;
+    /* Remove bullet points */
+    padding-left: 0;
+    /* Remove default padding */
+}
+
+.history-section ul li {
+    border: 3px;
+    border-radius: 8px;
+    padding: 5px 10px;
+    background-color: #172b4d;
+    color: #fff;
+    /* Set text color to black */
+    margin-bottom: 5px;
+    text-align: center;
+    /* Add some space between list items */
+}
+
+.history {
+    padding-left: 0px;
+    font-weight: bold;
+
+}
+
+.close-button {
+    font-weight: bold;
+    position: absolute;
+    top: 5px;
+    color: #172b4d;
+    right: 5px;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.clean {
+    position: absolute;
+    bottom: 20px;
+    /* Adjust this value as needed */
+    right: 20px;
+    /* Adjust this value as needed */
+    display: flex;
+    align-items: center;
+}
+
+/* Adjust the image width */
+.clean img {
+    height: 40px;
+    width: 40px;
+    /* Adjust the width as needed */
+    /* Maintain aspect ratio */
+}
+
+.htry {
+    margin-bottom: 5px;
+}
+
+#dropZone {
+    padding: 20px;
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+}
+
+#dropZone.highlight {
+    border-color: #172b4d;
+}

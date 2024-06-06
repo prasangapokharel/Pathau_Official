@@ -1,0 +1,263 @@
+
+       
+* {
+         margin: 0;
+         padding: 0;
+         display: fixed;
+     }
+     body {
+         font-family: 'Inter', sans-serif;
+        background-color: #fff; /* Light grey background */
+         color: #172b4d;/* Dark text color */
+         overflow: hidden;
+         transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
+     }
+
+     .header {
+         background-color: #172b4d; 
+         color: #fff; /* White text color */
+         text-align: center;
+         padding: 10px 0;
+         font-family: 'Inter', sans-serif;
+     }
+.container {
+ height: 510px;
+ width: 80%;
+ margin: 20px auto;
+ background-color: #fff;   /* Light grey background */
+ padding: 20px;
+ overflow: hidden;
+ border-radius: 10px;
+ font-family: 'Inter', sans-serif;
+ position: relative;
+ transition: box-shadow 0.3s; /* Smooth transition for box shadow */
+ box-shadow: 0 4px 10px #172b4d; /* Subtle box shadow */
+}
+footer {
+       background-color: #fff;/* Light grey background */
+
+         text-align: center;
+         color: #172b4d;
+         text-align: center;
+     }
+img{
+ height: 30px;
+ width: 30px;
+ border: 1px;
+ border-radius: 100px;
+}
+     .code-wrapper {
+         overflow: hidden;
+         max-height: 300px;
+         border: 1px solid #555;
+         border-radius: 5px;
+         padding: 10px 5px;
+         margin: 20px 0px;
+         background-color: #333; /* Dark code wrapper background color */
+         color: #fff;  /* Text color */
+     }
+
+     .copy-btn {
+         position: absolute;
+         top: 10px;
+          margin-top: 9px;
+         right: 10px;
+         padding: 5px;
+         background-color: #fff;  /* Button background color */
+         color: #172b4d; 
+         border: none;
+         cursor: pointer;
+         border-radius: 5px;
+         transition: background-color 0.3s;
+     }
+
+     .copy-btn:hover {
+         background-color: #fff;
+         color: #172b4d; /* Button hover background color */
+     }
+
+     button {
+         padding: 10px 20px;
+         background-color: #172b4d;  /* Button background color */
+         color: #fff; 
+         cursor: pointer;
+         border-radius: 8px;
+         transition: background-color 0.3s;
+     }
+
+     button:hover {
+        background-color: #172b4d;  /* Button background color */
+         color: #fff;  Button hover background color */
+     }
+
+  
+
+     input[type="text"] {
+         
+         width: 100%;
+         padding: 10px;
+         border: 1px solid #172b4d; /* Border color */
+         border-radius: 5px;
+         background-color: #172b4d; /* Dark background color */
+         color: #fff; /* Text color */
+         margin-bottom: 20px; /* Add margin bottom */
+         box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
+     }
+
+     input[type="text"]:focus {
+         border-color: #007bff; /* Focus border color */
+     }
+     .copy-success-message {
+         position: fixed;
+         top: 60%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         background-color: #fff; /* Green background color */
+         color: #172b4d;
+         padding: 10px 10px; /* Padding */
+         border-radius: 18px; /* Rounded corners */
+         opacity: 0; /* Initially hidden */
+         transition: opacity 0.5s; /* Fade in/out transition */
+         z-index: 9999; /* Ensure it's above other elements */
+     }
+         .back-btn {
+         background-color: #fff;  /* Button background color */
+         color: #172b4d;  /* Text color */
+         padding: 5px 5px; /* Padding */
+         border: none; /* No border */
+         border-radius: 5px; /* Rounded corners */
+         cursor: pointer; /* Cursor style */
+         transition: background-color 0.3s; /* Smooth transition for background color */
+         text-decoration: none; /* Remove default underline */
+         display: inline-block; /* Display as inline-block to adjust size */
+     }
+
+     .back-btn:hover {
+         background-color: #fff; /* Darker background color on hover */
+     }
+
+     /* Adjust margin for the back button */
+     .back-btn-container {
+         margin-bottom: 10px;
+     }
+     .code-wrapper {
+         
+ overflow: hidden;
+ max-height: 180px;
+ border: 0px solid #172b4d;
+ border-radius: 8px;
+ padding: 10px 5px;
+ margin: 20px 0px;
+ background-color: #fff;  
+ color: #172b4d;  /* Text color */
+}
+.web{
+ width: 30px;
+ height: 30px;
+ margin-bottom: -4px;
+display: flex;
+}
+.slo{
+display: flex;
+justify-content: center; /* Align content horizontally at the center */ /* Align content horizontally at the center */
+align-items: center; 
+
+}
+.prom{
+    text-decoration: none;
+   color: #172b4d;
+}
+p{
+ color: #fff;
+}
+.slog{
+ font-weigth: bold;
+}
+ span.qr-icon {
+         width: 60px;
+         height: 30px;
+         cursor: pointer;
+         margin-left: 5px;
+         padding-left:5px;
+         font-size: 16px;
+         display:inline;
+         color: #172b4d;
+         border-radius: 2px;
+         margin-bottom: -6px; /* Adjust as needed */
+     }
+
+     /* Popup styles */
+     .popup {
+         display: none;
+         position: fixed;
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+         z-index: 9999; /* Ensure it's on top of other elements */
+     }
+
+     .popup-content {
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%, -50%);
+         background-color: transparent;
+         padding: 20px;
+         border-radius: 10px;
+         box-shadow:#172b4d; /* Add shadow for better visibility */
+     }
+
+     .close-btn {
+         position: absolute;
+         top: 10px;
+         padding-left: 5px;
+         right: 10px;
+         color:#fff;
+         border: 5px;
+         border-radius: 10px;
+         background-color:transparent;
+         cursor: pointer;
+     }
+
+     /* Additional styles for QR code image in the popup */
+     #popup-qr-code-img {
+         width: auto; /* Adjust the size as needed */
+         height: auto;
+         color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+         border-radius: 6px;
+         border: 15px solid #fff; /* Add border for better visibility */
+     }
+.delete-btn{
+          background-color: red; 
+         border: none;
+         font-size: 12px;
+         font-weight: bold;
+         color: #fff;
+         margin-bottom: 10px;
+     }
+      .delete-btn:hover {
+        background-color: red;  /* Button background color */
+         color: #fff;  Button hover background color */
+     }
+     .key{
+          font-size:20px;
+         color: red;
+         font-weight: bold;
+     }
+.keyd{
+ margin-top:20px;
+}
+.timer{
+ margin-top:40px;
+ color:#172b4d;}
+ .tit{
+ text-decoration: none;
+ color: #fff;
+}
+ .adsbygoogle{
+     display: none;
+ }
+ 
